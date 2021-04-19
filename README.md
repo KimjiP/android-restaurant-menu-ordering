@@ -9,3 +9,5 @@ This code includes:
 3. Querying and modifying database entries
 4. OnClick and OnLongClick events
 5. Using Adapter and RecyclerView
+
+See android-restaurant-menu-ordering/app/src/main/java/com/example/madclassproj/ for the java codes
