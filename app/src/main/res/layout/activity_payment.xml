@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".PaymentActivity">
+
+    <TextView
+        android:id="@+id/tv_paid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_cost"
+        app:layout_constraintTop_toBottomOf="@+id/tv_cost" />
+
+    <TextView
+        android:id="@+id/tv_cost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintStart_toEndOf="@+id/tv_txtcost"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_balance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_paid"
+        app:layout_constraintTop_toBottomOf="@+id/tv_paid" />
+
+    <TextView
+        android:id="@+id/tv_txtbal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="2dp"
+        android:text="Bal: "
+        app:layout_constraintStart_toEndOf="@+id/tv_tableIDPay"
+        app:layout_constraintTop_toBottomOf="@+id/tv_txtpaid" />
+
+    <TextView
+        android:id="@+id/tv_EuroPay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="Bal: €"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toStartOf="@+id/et_am"
+        app:layout_constraintTop_toTopOf="parent" />
+
+<androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/order_RecyclerPay"
+    android:layout_width="409dp"
+    android:layout_height="match_parent"
+    android:layout_marginStart="1dp"
+    android:layout_marginTop="64dp"
+    android:scrollbars="vertical"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_tableIDPay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/btnPay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        android:contentDescription="Send Payment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/pay" />
+
+    <EditText
+        android:id="@+id/et_am"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:inputType="numberDecimal"
+        android:text="0.00"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toStartOf="@+id/btnPay"
+        app:layout_constraintTop_toTopOf="parent"
+        android:maxWidth="70dp" />
+
+    <TextView
+        android:id="@+id/tv_txtcost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="2dp"
+        android:text="Cost:"
+        app:layout_constraintStart_toEndOf="@+id/tv_tableIDPay"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_txtpaid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="2dp"
+        android:text="Paid: "
+        app:layout_constraintStart_toEndOf="@+id/tv_tableIDPay"
+        app:layout_constraintTop_toBottomOf="@+id/tv_txtcost" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
